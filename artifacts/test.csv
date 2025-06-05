@@ -1,0 +1,201 @@
+student_id,age,gender,study_hours_per_day,social_media_hours,netflix_hours,part_time_job,attendance_percentage,sleep_hours,diet_quality,exercise_frequency,parental_education_level,internet_quality,mental_health_rating,extracurricular_participation,exam_score
+S1521,23,Male,3.5,2.1,1.4,No,82.2,7.7,Fair,1,High School,Good,3,No,64.2
+S1737,21,Male,5.9,4.6,2.6,Yes,100.0,6.6,Fair,0,High School,Average,1,Yes,72.7
+S1740,23,Female,4.5,2.4,1.2,Yes,86.8,6.5,Poor,3,,Average,4,Yes,79.0
+S1660,24,Female,3.3,2.2,1.4,No,89.1,5.9,Good,2,High School,Good,9,Yes,79.5
+S1411,24,Male,1.6,0.8,3.2,Yes,63.0,8.0,Good,3,High School,Good,10,No,58.2
+S1678,18,Female,3.5,5.2,0.7,Yes,79.9,7.4,Good,0,Master,Good,2,Yes,53.4
+S1626,21,Male,3.0,1.6,2.1,No,78.8,6.3,Good,6,Bachelor,Good,9,Yes,70.8
+S1513,22,Male,2.1,1.9,2.7,Yes,70.9,6.9,Good,3,High School,Good,6,No,62.5
+S1859,23,Female,1.6,3.2,1.7,No,83.9,8.2,Good,1,High School,Good,1,No,36.8
+S1136,17,Female,4.9,3.0,3.6,No,91.1,6.7,Good,1,Bachelor,Good,4,No,67.6
+S1811,19,Female,0.0,2.4,0.6,Yes,87.0,7.1,Good,4,High School,Average,5,No,53.0
+S1076,20,Male,6.0,2.5,2.9,No,85.1,6.7,Poor,5,Bachelor,Average,10,Yes,100.0
+S1636,17,Female,3.0,3.2,1.6,No,81.6,9.1,Fair,2,Bachelor,Average,1,Yes,58.4
+S1973,19,Male,4.4,4.3,3.2,No,76.0,5.4,Good,4,Master,Good,8,No,74.6
+S1938,22,Male,1.2,2.3,1.7,No,97.7,4.9,Fair,1,High School,Poor,1,No,28.0
+S1899,19,Female,3.8,2.0,1.5,No,80.8,5.1,Poor,0,,Average,1,No,55.7
+S1280,20,Female,4.5,4.6,2.0,No,87.9,6.5,Fair,2,Bachelor,Good,6,No,73.8
+S1883,24,Male,3.7,2.8,2.1,No,82.3,5.8,Good,6,High School,Average,4,No,75.5
+S1761,18,Female,4.6,3.4,2.0,No,77.5,7.9,Good,0,Bachelor,Good,1,Yes,71.8
+S1319,22,Male,2.8,3.3,3.3,No,73.7,3.9,Good,4,Master,Average,5,Yes,59.4
+S1549,23,Male,2.0,4.4,1.8,No,92.5,9.5,Good,4,Bachelor,Average,4,No,51.5
+S1174,24,Male,3.7,3.6,3.3,Yes,80.2,7.7,Good,5,High School,Poor,2,No,69.3
+S1371,24,Male,0.8,1.4,3.8,Yes,76.5,7.5,Good,2,Bachelor,Average,10,No,36.0
+S1527,18,Female,3.8,0.7,2.1,No,77.5,7.2,Good,5,Bachelor,Good,10,No,81.8
+S1210,23,Female,3.2,2.3,1.7,Yes,83.8,6.6,Poor,0,Master,Good,9,No,66.3
+S1235,20,Female,3.8,0.8,0.3,No,72.3,6.7,Fair,1,High School,Poor,3,No,71.5
+S1101,18,Male,3.6,3.0,1.9,No,78.1,4.5,Good,6,Bachelor,Average,6,No,74.0
+S1986,20,Male,1.1,1.7,2.2,No,91.4,7.0,Poor,5,Master,Poor,8,No,59.6
+S1902,22,Male,4.1,2.4,0.8,No,72.7,5.8,Fair,3,Master,Good,3,No,66.7
+S1947,24,Female,4.5,3.2,3.3,Yes,70.0,6.3,Good,0,High School,Good,6,Yes,59.9
+S1346,19,Male,4.5,6.0,2.2,Yes,95.3,7.6,Poor,3,High School,Good,2,Yes,73.7
+S1139,17,Male,4.0,0.7,3.1,No,86.0,5.6,Good,6,High School,Poor,6,No,83.5
+S1621,18,Female,3.4,1.7,1.4,No,95.5,7.8,Good,0,Master,Good,2,No,70.7
+S1499,20,Male,5.2,3.2,4.2,Yes,78.9,6.1,Poor,0,Bachelor,Poor,10,No,83.3
+S1370,20,Male,3.7,3.1,3.4,Yes,83.7,5.5,Fair,1,High School,Average,5,Yes,59.8
+S1198,21,Male,1.3,0.4,2.3,Yes,69.2,5.5,Good,1,High School,Good,8,Yes,42.2
+S1687,21,Male,2.2,1.5,1.3,Yes,89.8,6.5,Poor,5,Master,Average,9,No,71.6
+S1584,22,Female,2.1,0.0,0.7,No,77.5,6.1,Good,0,Bachelor,Average,5,No,52.5
+S1901,20,Male,3.3,2.1,2.1,No,99.4,4.4,Fair,6,High School,Good,3,Yes,71.4
+S1059,21,Female,6.7,2.2,2.6,No,84.5,6.7,Good,3,Master,Average,5,Yes,97.1
+S1328,24,Female,1.2,2.5,0.8,Yes,96.9,5.8,Good,4,Master,Good,5,No,50.3
+S1096,18,Female,6.0,3.6,0.8,No,92.3,7.1,Good,0,High School,Good,3,No,87.9
+S1312,20,Male,3.3,1.6,1.9,No,93.2,4.5,Good,6,Master,Average,4,No,70.1
+S1974,20,Male,3.0,2.5,1.7,No,90.1,4.0,Fair,3,Bachelor,Poor,7,No,70.9
+S1299,24,Female,4.5,3.1,0.5,No,100.0,7.7,Fair,3,Bachelor,Average,10,No,93.8
+S1277,22,Female,5.9,3.5,0.4,No,89.0,4.9,Good,1,,Good,3,No,71.4
+S1924,17,Other,2.7,2.3,3.2,Yes,97.4,5.5,Poor,5,Bachelor,Average,1,Yes,57.4
+S1601,24,Other,4.6,1.5,1.8,No,81.5,7.3,Fair,0,High School,Good,5,Yes,80.2
+S1439,19,Female,2.4,1.9,1.5,No,92.4,7.8,Good,6,High School,Good,3,No,63.8
+S1837,21,Female,2.2,1.0,1.4,No,76.6,5.1,Poor,2,High School,Poor,10,No,62.6
+S1570,22,Male,3.2,4.0,2.7,No,74.5,8.0,Good,6,Master,Good,6,Yes,61.8
+S1879,21,Female,0.8,2.3,1.0,No,91.8,6.7,Fair,2,High School,Poor,6,No,44.3
+S1261,22,Male,5.1,3.9,1.7,Yes,81.6,5.9,Fair,0,,Poor,3,Yes,65.1
+S1578,18,Male,4.9,4.4,1.4,Yes,97.0,6.7,Fair,4,High School,Average,3,No,77.2
+S1023,24,Female,1.1,4.1,1.4,Yes,90.0,9.0,Fair,6,Bachelor,Good,1,No,43.7
+S1030,21,Female,3.7,0.6,1.3,No,75.6,7.5,Fair,2,Master,Average,5,No,70.6
+S1617,24,Female,3.4,2.2,0.4,No,91.4,5.6,Fair,5,High School,Poor,5,No,71.3
+S1010,19,Female,4.6,3.7,0.8,No,77.6,5.8,Fair,1,,Good,3,No,63.3
+S1221,19,Male,2.8,1.4,3.1,No,100.0,5.4,Poor,4,High School,Good,6,Yes,63.7
+S1820,23,Male,2.0,2.8,3.3,No,90.7,6.9,Fair,1,Master,Poor,5,No,50.7
+S1296,22,Female,4.6,1.8,3.0,No,74.4,6.3,Fair,6,High School,Average,8,No,86.2
+S1054,23,Female,3.1,1.9,2.6,Yes,64.0,7.1,Fair,5,High School,Good,10,No,68.1
+S1542,19,Male,4.5,4.9,0.8,No,80.2,6.2,Good,1,Bachelor,Poor,8,No,72.2
+S1209,21,Female,2.2,4.0,1.9,No,86.2,6.2,Poor,0,High School,Average,5,Yes,47.1
+S1604,23,Other,3.1,2.8,2.0,No,100.0,6.8,Poor,4,Master,Good,8,Yes,72.8
+S1692,21,Male,1.7,1.2,3.2,No,76.9,5.8,Good,4,High School,Average,5,Yes,37.4
+S1662,21,Male,3.2,2.4,1.8,No,86.1,4.4,Fair,4,,Average,8,Yes,76.3
+S1866,21,Female,6.2,2.7,0.9,No,80.9,3.7,Fair,3,Bachelor,Good,4,Yes,87.9
+S1070,18,Female,2.7,1.7,1.3,No,95.5,6.1,Poor,2,Bachelor,Good,2,Yes,59.7
+S1543,18,Female,5.2,3.7,0.9,No,96.0,6.9,Good,0,High School,Poor,2,No,77.1
+S1107,20,Male,2.1,2.9,1.4,No,76.9,6.1,Fair,4,,Average,7,No,60.4
+S1493,22,Female,3.0,3.7,0.9,No,67.3,5.9,Poor,5,Bachelor,Average,10,No,73.9
+S1590,17,Female,0.0,4.6,1.2,No,96.2,6.1,Poor,6,Bachelor,Average,7,No,42.0
+S1741,22,Female,3.0,2.0,1.7,No,98.5,5.4,Poor,1,Bachelor,Good,3,No,51.3
+S1292,17,Female,3.9,2.4,1.7,Yes,91.0,7.5,Good,4,Master,Average,6,Yes,74.2
+S1289,24,Female,3.5,1.7,1.3,No,74.3,6.1,Good,1,High School,Good,7,Yes,73.5
+S1652,23,Female,5.9,4.6,0.9,No,96.9,5.4,Good,4,Bachelor,Average,10,No,100.0
+S1039,19,Male,5.5,3.1,2.3,No,71.3,5.7,Good,1,High School,Average,3,No,82.3
+S1589,21,Male,5.0,2.3,0.2,No,78.9,6.8,Poor,6,Bachelor,Good,1,No,75.4
+S1307,18,Female,4.1,2.5,1.9,Yes,91.5,7.6,Fair,2,,Good,5,No,75.4
+S1679,18,Female,3.2,2.3,1.5,No,59.5,6.5,Good,2,Bachelor,Good,7,No,64.2
+S1066,20,Male,3.6,4.2,0.9,No,67.0,5.4,Good,4,Bachelor,Average,8,No,66.5
+S1275,20,Male,3.9,2.1,2.8,No,74.2,6.7,Fair,5,Bachelor,Average,6,No,77.8
+S1067,17,Male,3.3,1.8,3.2,No,81.7,5.8,Poor,0,Master,Good,2,No,62.2
+S1318,23,Male,2.2,0.9,3.1,No,76.8,6.0,Fair,6,High School,Poor,7,No,64.1
+S1548,18,Female,3.3,2.1,2.3,No,61.2,7.3,Poor,6,High School,Poor,3,No,67.1
+S1998,24,Male,5.4,4.1,1.1,Yes,100.0,7.6,Fair,0,Bachelor,Average,1,No,69.7
+S1714,24,Female,5.5,2.5,1.0,No,83.2,6.8,Fair,0,Bachelor,Good,1,Yes,80.6
+S1753,18,Male,4.3,3.4,0.9,No,83.3,5.7,Fair,1,Master,Good,2,No,59.2
+S1327,23,Male,0.9,2.4,2.5,No,89.2,6.9,Fair,0,High School,Poor,1,No,23.1
+S1382,20,Male,6.0,2.2,2.8,Yes,83.1,7.6,Good,0,Bachelor,Average,6,No,96.8
+S1451,22,Female,1.2,1.1,1.9,No,69.9,4.8,Poor,4,Master,Poor,7,No,58.6
+S1522,22,Female,2.1,2.1,2.0,No,74.6,5.7,Fair,0,High School,Good,6,Yes,44.1
+S1218,24,Male,2.6,2.0,2.4,No,76.3,7.4,Fair,1,Bachelor,Good,3,No,48.5
+S1787,24,Male,3.5,0.0,2.3,No,79.0,3.5,Fair,3,Bachelor,Good,5,Yes,64.4
+S1436,24,Male,4.4,1.8,0.7,No,74.0,7.8,Good,4,High School,Good,2,Yes,78.4
+S1764,21,Male,6.6,2.6,1.5,No,84.7,7.9,Fair,1,Master,Poor,2,No,96.6
+S1088,20,Male,3.9,2.3,2.1,No,100.0,6.1,Poor,6,Bachelor,Good,4,No,73.4
+S1063,17,Male,4.1,2.3,2.6,Yes,76.5,5.1,Fair,3,Bachelor,Average,9,No,77.6
+S1826,19,Male,4.6,2.4,2.4,No,75.2,6.9,Poor,4,High School,Good,4,No,87.8
+S1716,19,Male,2.7,1.4,2.8,No,83.7,5.6,Good,2,High School,Average,7,Yes,63.5
+S1351,17,Female,3.2,3.2,0.8,No,98.6,7.3,Good,0,High School,Good,6,No,70.4
+S1936,22,Male,4.5,3.8,2.5,No,88.6,4.9,Good,5,Bachelor,Average,2,Yes,66.1
+S1256,23,Female,3.6,3.2,2.7,No,90.6,5.7,Good,0,Bachelor,Good,6,No,64.5
+S1635,18,Male,2.4,1.5,1.4,No,79.7,4.9,Poor,1,Master,Poor,3,No,45.8
+S1644,24,Male,0.8,2.4,0.8,No,100.0,6.2,Fair,3,Bachelor,Average,2,Yes,35.3
+S1554,17,Other,2.7,2.9,2.9,No,80.9,6.6,Fair,0,,Poor,6,No,53.4
+S1959,23,Female,3.2,4.5,0.7,No,95.1,5.9,Fair,2,Master,Good,1,No,45.7
+S1168,23,Male,1.7,3.3,0.6,No,89.0,5.4,Fair,5,Bachelor,Good,4,Yes,50.1
+S1917,20,Male,5.3,3.2,0.0,No,75.2,4.4,Good,5,High School,Good,3,No,77.2
+S1528,18,Male,3.9,3.4,3.2,No,65.3,5.1,Fair,6,High School,Average,9,Yes,77.0
+S1823,23,Male,4.8,2.8,0.6,No,93.5,6.7,Fair,4,High School,Good,1,No,85.4
+S1985,18,Male,5.7,3.1,0.0,Yes,86.6,5.7,Fair,2,Master,Good,3,Yes,80.9
+S1816,17,Female,5.2,4.0,2.4,No,98.9,6.2,Fair,1,High School,Average,9,No,80.6
+S1086,22,Male,3.6,1.4,2.3,No,83.1,9.5,Good,5,Bachelor,Poor,6,No,79.2
+S1432,21,Other,4.2,2.4,4.3,No,80.1,5.5,Fair,0,Master,Good,9,No,70.7
+S1184,17,Female,4.9,0.0,0.7,No,71.2,6.4,Fair,5,Master,Poor,5,No,96.2
+S1978,24,Female,1.6,3.1,2.8,No,82.7,7.8,Fair,0,Bachelor,Good,5,Yes,43.5
+S1534,19,Male,3.7,2.9,2.8,No,100.0,6.5,Good,6,Bachelor,Average,8,No,82.5
+S1294,18,Male,4.3,3.3,0.0,No,100.0,6.8,Fair,6,High School,Average,9,No,94.9
+S1892,17,Male,2.5,2.2,2.3,No,86.6,6.3,Fair,0,High School,Good,2,No,46.8
+S1425,21,Male,4.5,1.7,0.4,No,86.1,7.8,Poor,4,Bachelor,Poor,2,Yes,71.1
+S1713,20,Female,4.7,1.8,0.2,Yes,94.4,6.7,Fair,1,Bachelor,Good,8,No,83.3
+S1260,17,Male,4.3,3.8,1.1,No,95.3,4.8,Fair,1,High School,Average,8,No,70.9
+S1237,22,Female,2.0,1.3,3.4,Yes,75.0,4.9,Fair,1,High School,Average,9,No,53.8
+S1559,22,Female,2.8,2.6,1.7,No,72.2,7.0,Fair,6,High School,Good,4,No,70.3
+S1583,18,Female,5.2,3.2,2.0,No,70.0,6.9,Fair,2,Bachelor,Poor,1,Yes,70.5
+S1445,19,Male,2.1,2.3,0.9,No,78.8,4.8,Good,3,Bachelor,Poor,10,No,63.1
+S1867,22,Female,5.4,3.0,1.5,No,100.0,8.5,Poor,6,Bachelor,Good,2,No,94.5
+S1800,17,Male,3.4,1.5,1.0,No,90.8,7.5,Good,4,Bachelor,Poor,7,Yes,86.1
+S1599,22,Male,5.5,3.2,1.8,No,100.0,7.5,Fair,0,High School,Poor,6,No,77.3
+S1849,22,Male,4.9,1.9,2.5,No,90.9,6.0,Fair,3,Bachelor,Average,10,No,98.7
+S1265,18,Female,0.6,3.1,3.0,No,79.9,5.2,Good,1,Bachelor,Good,4,No,18.4
+S1995,21,Female,2.6,0.5,1.6,No,77.0,7.5,Fair,2,High School,Good,6,Yes,76.1
+S1529,18,Female,3.1,3.2,1.6,No,84.8,7.5,Fair,6,Master,Good,1,No,65.7
+S1055,20,Male,5.4,2.8,3.8,No,91.8,6.9,Good,2,High School,Good,8,No,87.2
+S1120,24,Male,3.7,0.4,0.9,No,92.1,6.6,Fair,6,Bachelor,Average,6,No,87.9
+S1215,21,Female,3.2,4.2,0.7,No,76.5,5.4,Good,6,High School,Good,5,Yes,67.5
+S1025,22,Male,4.9,4.3,3.3,No,74.7,9.0,Fair,1,High School,Average,2,Yes,69.9
+S1072,17,Male,3.4,0.1,0.6,No,77.7,7.9,Fair,1,High School,Average,4,Yes,77.1
+S1044,20,Female,3.6,1.4,0.8,No,73.0,5.3,Good,4,High School,Poor,9,No,78.5
+S1247,17,Female,5.8,3.5,1.9,No,88.7,8.8,Fair,1,Bachelor,Good,8,Yes,90.0
+S1721,19,Male,5.9,0.0,2.0,Yes,84.6,8.3,Poor,3,High School,Good,8,No,100.0
+S1281,20,Female,5.3,4.2,1.1,Yes,79.9,5.1,Good,2,High School,Average,9,No,83.3
+S1893,21,Female,3.0,1.6,2.0,No,98.6,6.0,Good,5,Bachelor,Good,2,No,67.7
+S1914,20,Female,2.6,1.6,1.3,Yes,87.4,5.2,Good,6,Bachelor,Poor,10,No,72.9
+S1810,19,Male,4.4,0.2,1.4,No,81.2,5.4,Good,1,High School,Average,10,No,80.7
+S1244,23,Male,5.0,4.5,2.3,No,87.2,7.7,Good,6,High School,Average,8,No,98.0
+S1822,22,Female,2.6,3.4,5.3,No,79.8,9.0,Poor,0,Bachelor,Good,2,No,49.1
+S1321,21,Male,2.9,4.6,0.0,Yes,77.6,4.9,Good,3,Bachelor,Good,9,Yes,67.8
+S1643,17,Female,1.2,1.3,2.0,No,85.2,4.3,Fair,6,High School,Good,4,No,49.4
+S1158,17,Female,2.6,1.8,3.0,No,83.8,6.6,Fair,4,Bachelor,Good,5,Yes,62.3
+S1977,24,Female,5.8,1.3,2.2,Yes,89.1,7.9,Good,5,High School,Average,1,Yes,99.0
+S1429,20,Male,3.6,2.4,1.4,No,70.0,8.6,Fair,2,Bachelor,Average,7,No,67.6
+S1941,21,Male,2.1,3.5,0.9,No,88.8,5.6,Fair,6,High School,Good,6,No,63.4
+S1462,22,Male,4.9,2.6,0.0,Yes,66.1,7.6,Poor,3,Bachelor,Good,4,No,80.9
+S1309,22,Male,4.2,2.2,1.6,No,84.9,7.1,Fair,5,High School,Good,3,Yes,73.3
+S1697,18,Other,3.1,2.2,2.5,No,88.0,5.6,Good,4,High School,Good,9,No,66.9
+S1060,19,Female,1.7,2.1,0.6,Yes,92.1,7.9,Fair,1,High School,Average,4,No,61.2
+S1884,24,Female,2.3,3.4,2.8,No,85.3,8.9,Good,0,Master,Good,3,No,40.9
+S1595,20,Male,5.6,2.0,0.0,No,77.5,7.1,Fair,4,Bachelor,Average,7,No,100.0
+S1767,24,Male,3.1,2.8,2.3,No,79.0,4.8,Poor,0,Bachelor,Average,10,No,63.7
+S1649,21,Female,4.8,1.8,2.7,No,77.8,6.6,Fair,6,Bachelor,Average,5,No,88.0
+S1650,23,Female,2.8,2.4,0.7,No,78.6,8.2,Fair,0,Bachelor,Good,5,No,61.5
+S1865,17,Male,3.8,2.0,1.4,No,82.6,5.4,Good,2,Master,Good,2,No,65.9
+S1668,21,Male,3.4,3.6,3.1,No,89.2,6.4,Good,2,Bachelor,Good,10,No,76.4
+S1298,21,Female,5.4,3.1,1.8,No,88.1,6.2,Poor,3,High School,Average,4,Yes,91.3
+S1689,18,Female,4.1,1.9,0.2,No,84.0,4.0,Fair,6,,Good,2,No,72.4
+S1314,19,Female,2.3,2.9,1.0,No,75.3,5.8,Good,2,Bachelor,Good,5,Yes,48.9
+S1310,24,Other,5.3,3.8,1.7,No,79.0,7.1,Good,6,Master,Average,8,No,96.3
+S1361,17,Male,4.4,6.1,0.0,No,92.6,5.1,Poor,4,Bachelor,Average,9,Yes,84.9
+S1479,20,Female,1.9,3.0,2.3,No,91.4,5.7,Good,5,Bachelor,Good,4,No,43.3
+S1110,24,Male,5.1,2.9,1.6,No,64.3,6.5,Fair,3,Bachelor,Average,9,Yes,86.5
+S1989,24,Male,1.0,1.4,2.1,Yes,76.4,4.9,Fair,3,High School,Average,6,No,47.6
+S1486,19,Female,3.2,2.1,2.1,No,94.3,8.1,Fair,0,,Good,3,No,69.4
+S1363,18,Male,2.1,2.1,3.6,No,87.8,5.8,Fair,5,Master,Poor,4,No,56.9
+S1254,17,Male,2.5,3.7,1.2,Yes,78.6,7.8,Good,6,Bachelor,Average,9,No,78.8
+S1259,19,Female,4.3,0.9,1.2,No,80.7,6.3,Fair,4,Master,Good,1,No,72.6
+S1802,17,Male,4.3,1.9,1.9,No,78.7,10.0,Fair,4,,Good,2,No,82.9
+S1677,24,Male,3.7,4.5,2.2,No,85.9,9.1,Good,3,,Good,5,No,73.8
+S1494,21,Male,4.0,1.7,2.0,No,78.1,5.7,Fair,3,High School,Good,5,No,66.5
+S1670,17,Female,4.6,0.5,1.6,No,72.3,5.5,Good,2,Master,Good,10,Yes,88.9
+S1377,17,Female,2.7,3.6,0.9,No,86.9,7.2,Good,2,High School,Poor,6,Yes,67.9
+S1526,19,Female,2.8,3.1,4.5,No,95.9,6.3,Fair,2,,Good,3,No,40.7
+S1845,21,Male,3.8,0.9,2.5,No,78.2,6.5,Poor,6,High School,Average,4,Yes,78.1
+S1137,17,Male,3.1,4.2,0.8,No,69.4,7.0,Good,6,Bachelor,Poor,2,No,64.7
+S1355,23,Male,3.3,2.9,2.3,Yes,89.6,8.3,Good,2,High School,Average,10,No,81.1
+S1365,23,Female,5.1,3.1,0.5,Yes,81.9,4.8,Good,1,,Poor,3,No,76.0
+S1942,24,Female,2.2,4.5,3.3,No,76.8,6.1,Poor,3,High School,Good,7,No,50.2
+S1749,18,Female,3.7,4.0,1.0,No,70.1,6.7,Good,0,Bachelor,Poor,9,Yes,77.2
+S1948,22,Female,3.0,3.0,1.6,No,70.2,6.7,Fair,2,Master,Good,7,No,63.2
+S1829,24,Female,4.1,5.4,0.9,No,81.8,7.0,Poor,3,,Good,8,Yes,73.2
+S1656,23,Male,0.3,3.1,1.4,Yes,77.5,8.3,Good,3,Bachelor,Good,5,No,36.1
+S1199,19,Female,3.8,3.0,0.7,No,85.5,5.1,Fair,2,Bachelor,Good,4,No,61.6
+S1213,23,Male,1.1,3.1,3.8,No,88.3,6.8,Good,6,Bachelor,Poor,6,No,45.5
+S1408,20,Male,1.2,3.5,2.0,No,81.7,6.5,Poor,4,Bachelor,Good,1,No,34.3
+S1332,20,Male,2.7,1.9,2.3,No,71.6,7.7,Fair,3,High School,Poor,8,No,71.2
+S1208,22,Male,2.8,1.2,2.2,Yes,94.1,7.2,Fair,3,High School,Average,10,No,75.8
+S1613,18,Female,3.8,0.6,1.0,No,98.3,7.2,Fair,3,Bachelor,Average,9,No,85.7
+S1078,23,Female,4.4,2.0,2.0,Yes,85.8,7.1,Good,4,Master,Good,5,No,77.3
