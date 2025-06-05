@@ -5,4 +5,7 @@ seaborn
 flask
 scikit-learn
 ipykernel
+xgboost
+catboost
+lightgbm
 -e .
