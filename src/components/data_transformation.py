@@ -24,46 +24,35 @@ class DataTransformation:
     def get_data_transformer_obj(self):
 
         try:
-            num_features = ['age','study_hours_per_day','social_media_hours','netflix_hours','attendance_percentage','sleep_hours','exercise_frequency','mental_health_rating']
-            cat_features = ['gender','part_time_job','diet_quality','parental_education_level','internet_quality','extracurricular_participation']
+            num_features = [
+                'age','study_hours_per_day','social_media_hours','netflix_hours',
+                'attendance_percentage','sleep_hours','exercise_frequency','mental_health_rating'
+            ]
             ohe_features = ['gender','part_time_job','extracurricular_participation']
             ordinal_enc_features = ['diet_quality','parental_education_level','internet_quality']
 
-            num_pipeline = Pipeline(
-                steps=[
-                    ('imputer', SimpleImputer(strategy='median')),
-                    ('scaler', StandardScaler())
-                ]
-            )
+            num_pipeline = Pipeline([
+                ('imputer', SimpleImputer(strategy='median')),
+                ('scaler', StandardScaler())
+            ])
 
-            cat_pipeline = Pipeline(
-                steps=[
-                    ('imputer', SimpleImputer(strategy='most_frequent'))
-                ]
-            )
+            ohe_pipeline = Pipeline([
+                ('imputer', SimpleImputer(strategy='most_frequent')),
+                ('onehotencoder', OneHotEncoder(handle_unknown='ignore', sparse_output=False, drop='first')),
+                ('scaler', StandardScaler(with_mean=False))
+            ])
 
-            ohe_pipeline = Pipeline(
-                steps=[
-                    ('onehotencoder', OneHotEncoder(handle_unknown='ignore', sparse_output=False, drop='first')),
-                    ('scaler', StandardScaler(with_mean=False))
-                ]
-            )
+            ordinal_enc_pipeline = Pipeline([
+                ('imputer', SimpleImputer(strategy='most_frequent')),
+                ('ordinalencoder', OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-1)),
+                ('scaler', StandardScaler())
+            ])
 
-            ordinal_enc_pipeline = Pipeline(
-                steps=[
-                    ('ordinalencoder', OrdinalEncoder(categories='auto', handle_unknown='use_encoded_value', unknown_value=-1)),
-                    ('scaler', StandardScaler())
-                ]
-            )
-
-            preprocessor =ColumnTransformer(
-                [
-                    ('num_pipeline', num_pipeline, num_features),
-                    ('cat_pipeline', cat_pipeline, cat_features),
-                    ('ohe_pipeline', ohe_pipeline, ohe_features),
-                    ('ordinal_enc_pipeline', ordinal_enc_pipeline, ordinal_enc_features)
-                ]
-            )
+            preprocessor = ColumnTransformer([
+                ('num_pipeline', num_pipeline, num_features),
+                ('ohe_pipeline', ohe_pipeline, ohe_features),
+                ('ordinal_enc_pipeline', ordinal_enc_pipeline, ordinal_enc_features)
+            ])
 
             return preprocessor
         
