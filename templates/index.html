@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Exam Score Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+            <h2>🎓 Student Exam Score Predictor</h2>
+        </div>
+        <div class="card-body">
+            <form action="/predict" method="POST">
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" name="age" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" name="gender" required>
+                            <option disabled selected>Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="study_hours_per_day" class="form-label">Study Hours / Day</label>
+                        <input type="number" step="any" class="form-control" name="study_hours_per_day" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="social_media_hours" class="form-label">Social Media Hours</label>
+                        <input type="number" step="any" class="form-control" name="social_media_hours" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="netflix_hours" class="form-label">Netflix Hours</label>
+                        <input type="number" step="any" class="form-control" name="netflix_hours" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="part_time_job" class="form-label">Part-Time Job</label>
+                        <select class="form-select" name="part_time_job" required>
+                            <option disabled selected>Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="attendance_percentage" class="form-label">Attendance (%)</label>
+                        <input type="number" step="any" class="form-control" name="attendance_percentage" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="sleep_hours" class="form-label">Sleep Hours</label>
+                        <input type="number" step="any" class="form-control" name="sleep_hours" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="diet_quality" class="form-label">Diet Quality</label>
+                        <select class="form-select" name="diet_quality" required>
+                            <option disabled selected>Select</option>
+                            <option>Good</option>
+                            <option>Average</option>
+                            <option>Poor</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exercise_frequency" class="form-label">Exercise Frequency (per week)</label>
+                        <input type="number" class="form-control" name="exercise_frequency" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="parental_education_level" class="form-label">Parental Education Level</label>
+                        <select class="form-select" name="parental_education_level" required>
+                            <option disabled selected>Select</option>
+                            <option>High School</option>
+                            <option>Bachelors</option>
+                            <option>Masters</option>
+                            <option>Not Specified</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="internet_quality" class="form-label">Internet Quality</label>
+                        <select class="form-select" name="internet_quality" required>
+                            <option disabled selected>Select</option>
+                            <option>Good</option>
+                            <option>Average</option>
+                            <option>Poor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="mental_health_rating" class="form-label">Mental Health Rating (1-10)</label>
+                        <input type="number" class="form-control" name="mental_health_rating" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="extracurricular_participation" class="form-label">Extracurricular Participation</label>
+                        <select class="form-select" name="extracurricular_participation" required>
+                            <option disabled selected>Select</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success px-5">Predict Score</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
