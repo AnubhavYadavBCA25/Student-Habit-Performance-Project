@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    }
+
+    .img-wrapper {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: auto;
+      background: linear-gradient(135deg, #0ff, #17a2b8, #0ff);
+      padding: 4px;
+      animation: rotate 4s linear infinite;
+    }
+
+    .img-wrapper img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* @keyframes rotate {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    } */
+
+    .social-icons a {
+      color: #0ff;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #17a2b8;
+      transform: scale(1.2);
+    }
+
+    .btn-back {
+      background-color: #17a2b8;
+      border: none;
+      margin-top: 30px;
+    }
+
+    .btn-back:hover {
+      box-shadow: 0 0 15px #17a2b8, 0 0 40px #17a2b8;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="about-container">
+    <div class="img-wrapper mb-4">
+      <img src="{{ url_for('static', filename='anubhav.jpg') }}" alt="Anubhav Yadav">
+    </div>
+    <h2>Anubhav Yadav</h2>
+    <p><strong>🎓 BCA (Data Science)</strong> | SRM Institute of Science and Technology, NCR</p>
+    <p>This web application predicts student exam scores based on their lifestyle and learning habits. Developed using Machine Learning and deployed with Flask framework.</p>
+
+    <h5 class="mt-4">🌐 Connect with Me</h5>
+    <div class="social-icons mt-2">
+      <a href="https://www.linkedin.com/in/anubhavv-yadav" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/anubhav._.yadav" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://anubhav-portfolio.vercel.app" target="_blank"><i class="fas fa-globe"></i></a>
+    </div>
+
+    <a href="/" class="btn btn-back mt-4">⬅ Back to Home</a>
+  </div>
+</body>
+</html>

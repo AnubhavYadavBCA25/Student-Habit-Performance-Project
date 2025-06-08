@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Prediction Result</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Predicted Result</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .result-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(23, 162, 184, 0.5);
+    }
+
+    .btn-glow {
+      background-color: #17a2b8;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-glow:hover {
+      box-shadow: 0 0 15px #17a2b8, 0 0 40px #17a2b8;
+      background-color: #138496;
+    }
+
+    .score {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body class="bg-light">
-
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow-lg p-4">
-        <div class="card-body text-center">
-            <h2 class="card-title text-primary mb-4">📊 Prediction Result</h2>
-            <p class="fs-4">The predicted exam score is:</p>
-            <h1 class="display-4 text-success">{{ score }}</h1>
-            <hr>
-            <a href="/" class="btn btn-primary mt-3">🔁 Predict Again</a>
-        </div>
-    </div>
-</div>
-
+<body>
+  <div class="result-box">
+    <h1>📊 Predicted Exam Score</h1>
+    <p class="score">{{ score }}</p>
+    <a href="/" class="btn btn-glow mt-4">🔁 Predict Again</a>
+  </div>
 </body>
 </html>

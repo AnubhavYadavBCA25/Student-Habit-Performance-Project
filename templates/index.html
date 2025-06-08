@@ -1,139 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Student Exam Score Predictor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Student Score Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+        background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        min-height: 100vh;
+    }
+
+    .form-container {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px;
+        border-radius: 15px;
+        margin: 40px auto;
+        max-width: 900px;
+        box-shadow: 0 0 20px rgba(0,255,255,0.15);
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #e0e0e0;
+    }
+
+    .form-control, .form-select {
+        background-color: #222;
+        color: #fff;
+        border: 1px solid #555;
+    }
+
+    .form-control:focus, .form-select:focus {
+        box-shadow: 0 0 5px #17a2b8;
+        border-color: #17a2b8;
+        background-color: #1a1a1a;
+    }
+
+    .btn-submit {
+        background-color: #17a2b8;
+        border: none;
+        transition: 0.3s ease;
+        color: #fff;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    .btn-submit:hover {
+        box-shadow: 0 0 15px #17a2b8, 0 0 40px #17a2b8;
+        background-color: #138496;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-shadow: 0 0 10px #0ff;
+    }
+  </style>
+
 </head>
-<body class="bg-light">
+<body>
+  <div class="container py-5">
+    <h1 class="text-center">🎓 Student Exam Score Predictor</h1>
+    <form action="/predict" method="post" class="form-container">
+      <!-- age -->
+      <label>Age</label>
+      <input type="number" name="age" class="form-control" required>
 
-<div class="container mt-5">
-    <div class="card shadow-lg">
-        <div class="card-header bg-primary text-white text-center">
-            <h2>🎓 Student Exam Score Predictor</h2>
-        </div>
-        <div class="card-body">
-            <form action="/predict" method="POST">
+      <!-- gender -->
+      <label>Gender</label>
+      <select name="gender" class="form-control" required>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
 
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="age" class="form-label">Age</label>
-                        <input type="number" class="form-control" name="age" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="gender" class="form-label">Gender</label>
-                        <select class="form-select" name="gender" required>
-                            <option disabled selected>Select</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                </div>
+      <!-- other inputs below -->
+      <label>Study Hours Per Day</label>
+      <input type="number" name="study_hours_per_day" class="form-control" step="0.1" required>
 
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="study_hours_per_day" class="form-label">Study Hours / Day</label>
-                        <input type="number" step="any" class="form-control" name="study_hours_per_day" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="social_media_hours" class="form-label">Social Media Hours</label>
-                        <input type="number" step="any" class="form-control" name="social_media_hours" required>
-                    </div>
-                </div>
+      <label>Social Media Hours</label>
+      <input type="number" name="social_media_hours" class="form-control" step="0.1" required>
 
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="netflix_hours" class="form-label">Netflix Hours</label>
-                        <input type="number" step="any" class="form-control" name="netflix_hours" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="part_time_job" class="form-label">Part-Time Job</label>
-                        <select class="form-select" name="part_time_job" required>
-                            <option disabled selected>Select</option>
-                            <option>Yes</option>
-                            <option>No</option>
-                        </select>
-                    </div>
-                </div>
+      <label>Netflix Hours</label>
+      <input type="number" name="netflix_hours" class="form-control" step="0.1" required>
 
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="attendance_percentage" class="form-label">Attendance (%)</label>
-                        <input type="number" step="any" class="form-control" name="attendance_percentage" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="sleep_hours" class="form-label">Sleep Hours</label>
-                        <input type="number" step="any" class="form-control" name="sleep_hours" required>
-                    </div>
-                </div>
+      <label>Part Time Job</label>
+      <select name="part_time_job" class="form-control" required>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
 
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="diet_quality" class="form-label">Diet Quality</label>
-                        <select class="form-select" name="diet_quality" required>
-                            <option disabled selected>Select</option>
-                            <option>Good</option>
-                            <option>Average</option>
-                            <option>Poor</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="exercise_frequency" class="form-label">Exercise Frequency (per week)</label>
-                        <input type="number" class="form-control" name="exercise_frequency" required>
-                    </div>
-                </div>
+      <label>Attendance Percentage</label>
+      <input type="number" name="attendance_percentage" class="form-control" step="0.1" required>
 
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="parental_education_level" class="form-label">Parental Education Level</label>
-                        <select class="form-select" name="parental_education_level" required>
-                            <option disabled selected>Select</option>
-                            <option>High School</option>
-                            <option>Bachelors</option>
-                            <option>Masters</option>
-                            <option>Not Specified</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="internet_quality" class="form-label">Internet Quality</label>
-                        <select class="form-select" name="internet_quality" required>
-                            <option disabled selected>Select</option>
-                            <option>Good</option>
-                            <option>Average</option>
-                            <option>Poor</option>
-                        </select>
-                    </div>
-                </div>
+      <label>Sleep Hours</label>
+      <input type="number" name="sleep_hours" class="form-control" step="0.1" required>
 
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <label for="mental_health_rating" class="form-label">Mental Health Rating (1-10)</label>
-                        <input type="number" class="form-control" name="mental_health_rating" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="extracurricular_participation" class="form-label">Extracurricular Participation</label>
-                        <select class="form-select" name="extracurricular_participation" required>
-                            <option disabled selected>Select</option>
-                            <option>Yes</option>
-                            <option>No</option>
-                        </select>
-                    </div>
-                </div>
+      <label>Diet Quality</label>
+      <select name="diet_quality" class="form-control" required>
+        <option>Poor</option>
+        <option>Average</option>
+        <option>Excellent</option>
+      </select>
 
-                <div class="text-center">
-                    <button type="submit" class="btn btn-success px-5">Predict Score</button>
-                </div>
+      <label>Exercise Frequency (days/week)</label>
+      <input type="number" name="exercise_frequency" class="form-control" required>
 
-            </form>
-        </div>
+      <label>Parental Education Level</label>
+      <select name="parental_education_level" class="form-control" required>
+        <option>Bachelors</option>
+        <option>Masters</option>
+        <option>High School</option>
+        <option>Not Specified</option>
+      </select>
+
+      <label>Internet Quality</label>
+      <select name="internet_quality" class="form-control" required>
+        <option>Poor</option>
+        <option>Average</option>
+        <option>Good</option>
+      </select>
+
+      <label>Mental Health Rating (1-10)</label>
+      <input type="number" name="mental_health_rating" class="form-control" min="1" max="10" required>
+
+      <label>Extracurricular Participation</label>
+      <select name="extracurricular_participation" class="form-control" required>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <button type="submit" class="btn btn-submit mt-4">🔍 Predict Score</button>
+    </form>
+
+    <div class="text-center mt-4">
+      <a href="/about" class="text-info">About the Project 🔍</a>
     </div>
-</div>
-
-<!-- Bootstrap JS CDN -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  </div>
 </body>
 </html>
