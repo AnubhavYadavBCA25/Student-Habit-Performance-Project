@@ -1,6 +1,6 @@
 import os
 import sys
-import joblib
+import cloudpickle
 import numpy as np
 import pandas as pd
 from sklearn.metrics import r2_score
@@ -15,7 +15,7 @@ def save_object(file_path, obj):
         os.makedirs(dir_path, exist_ok=True)
 
         # with open(file_path, "wb") as file_obj:
-        joblib.dump(obj, file_path)
+        cloudpickle.dump(obj, file_path)
     
     except Exception as e:
         raise CustomException(e, sys)
@@ -51,7 +51,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, params):
 def load_object(file_path):
     try:
         # with open(file_path, 'rb') as file:
-            obj = joblib.load(file_path)
+            obj = cloudpickle.load(file_path)
             return obj
     except Exception as e:
         raise CustomException(e, sys)
