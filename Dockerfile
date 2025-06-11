@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the app
 COPY . .
 
-# Expose the port Flask is running on
-# EXPOSE 5000
+# Explicitly copy artifacts folder (optional if above COPY . . already includes it)
+COPY artifacts/ ./artifacts/
 
 # Run the Flask app
 CMD ["python", "app.py"]
