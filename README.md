@@ -53,28 +53,83 @@ The project uses a synthetic dataset (1000 students) named student_habits_perfor
 Each folder/file has a specific role: for example, ```notebook/``` contains analysis notebooks, ```src/``` contains code (feature engineering, pipeline classes), and ```app.py``` sets up web routes (e.g. a form to input student habits and display the predicted score).
 
 ## Local Setup Guide
-1. Clone the repository:
+1. **Clone the repository:**
 ```bash
 git clone https://github.com/AnubhavYadavBCA25/Student-Habit-vs-Academic-Performance-Project.git
 cd Student-Habit-vs-Academic-Performance-Project
 ```
 
-2. Install dependencies:
+2. **Install dependencies:**
 It’s recommended to use a Python virtual environment. Then run:
 ```bash
 pip install -r requirements.txt
 ```
 This installs all required packages (Pandas, CatBoost, Flask, etc.).
 
-3. Data Exploration and Model Training (optional):
+3. **Data Exploration and Model Training (optional):**
 - Open the notebooks in ```notebook/``` to explore the dataset and train the model. Follow any instructions or code cells there.
 - Alternatively, a pre-trained model is included in ```artifacts/```. If you want to retrain, run the training pipeline (e.g. via a ```src/train.py``` or the notebook).
 
-4. Run the web application:
+4. **Run the web application:**
 ```bash
 python app.py
 ```
 This starts the Flask server (by default on http://localhost:5000). Navigate to the URL in your browser to interact with the app (input student habit metrics and get a predicted score).
 
-5. (Optional) Tests and Linting:
+5. **(Optional) Tests and Linting:**
 If test files are present, you can run them (e.g. pytest) or run a linter (e.g. flake8) to ensure code quality. 
+
+## Azure Cloud Deployment (Container-based)
+The app can be deployed to Azure using a container. One approach is to use Azure Container Apps or Azure App Service for Containers. For example:
+
+- **Create an Azure Container Registry (ACR):**
+```bash
+az login  # Log in to Azure
+az group create --name MyResourceGroup --location eastus
+az acr create --resource-group MyResourceGroup --name MyACRName --sku Basic
+az acr login --name MyACRName
+```
+
+- **Push the Docker image:**
+```bash
+docker tag student-habit-app:latest MyACRName.azurecr.io/student-habit-app:latest
+docker push MyACRName.azurecr.io/student-habit-app:latest
+```
+
+- **Deploy to Azure:**
+- Option 1 – Azure Container Instance (ACI):
+```bash
+az container create --resource-group MyResourceGroup --name studentHabitApp \
+  --image MyACRName.azurecr.io/student-habit-app:latest --dns-name-label studenthabit-demo \
+  --ports 5000
+```
+The container will be reachable at ```<studenthabit-demo>.<location>.azurecontainer.io```.
+
+- Option 2 – Azure Web App (Container):
+```bash
+az appservice plan create --name MyPlan --resource-group MyResourceGroup --is-linux
+az webapp create --resource-group MyResourceGroup --plan MyPlan --name MyWebAppName \
+  --deployment-container-image-name MyACRName.azurecr.io/student-habit-app:latest
+```
+This creates an App Service that pulls your image. You can then browse to ```https://MyWebAppName.azurewebsites.net```.
+
+Follow Azure’s documentation for more details on authentication and network settings. In any case, using the provided ```Dockerfile``` ensures the same image is deployed to Azure.
+
+## How the Model Works
+- **Data Preprocessing:** The code handles missing values (if any), encodes categorical features (e.g. one-hot or CatBoost’s native handling), and normalizes/ scales features as needed. For example, gender is encoded to numeric, and features like study hours are kept numeric.
+Feature Engineering: No complex new features were created beyond the original columns, but further analysis (in the notebooks) might combine or transform features if beneficial.
+- **Model Training:** We use CatBoost Regressor to predict ```exam_score```. CatBoost is chosen for its strong performance with heterogeneous data. The data is split into training and test sets (e.g., an 80/20 split). The model is trained on the training set; hyperparameters (like learning rate, tree depth) can be tuned (for example using cross-validation or grid search).
+- **Evaluation:** The trained model is evaluated on test data using metrics like R² (coefficient of determination) and MAE (mean absolute error). In experiments, it typically achieves high accuracy (for instance, R² around 0.90, meaning 90% of variance explained). Feature importance analysis can show which habits influence scores most (for example, ```study_hours_per_day``` usually ranks high). These results demonstrate the model’s reliability.
+- **Prediction Pipeline:** A pipeline script (```predict_pipeline.py``` in src/) applies the same preprocessing to new input data and uses the saved model (from ```artifacts/```) to make predictions. The Flask app calls this pipeline when a user submits data, returning the predicted exam score.
+
+## About the Author
+**Anubhav Yadav** – Graduate Data Science student at SRM Institute of Science and Technology (Delhi NCR). Passionate about applying machine learning to educational data.
+
+- LinkedIn: in/anubhav-yadav-srm
+- Portfolio: anubhavyadavportfolio
+- GitHub: AnubhavYadavBCA25
+- Kaggle: anubhavyadavbca2025
+
+Feel free to connect or reach out for more projects and collaborations! References: The dataset is synthetic but based on realistic scenarios (see Kaggle descriptions), and similar studies have found a positive link between study time and performance ```pmc.ncbi.nlm.nih.gov```.
+
+
