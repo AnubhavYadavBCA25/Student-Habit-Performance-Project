@@ -122,13 +122,36 @@ Feature Engineering: No complex new features were created beyond the original co
 - **Evaluation:** The trained model is evaluated on test data using metrics like R² (coefficient of determination) and MAE (mean absolute error). In experiments, it typically achieves high accuracy (for instance, R² around 0.90, meaning 90% of variance explained). Feature importance analysis can show which habits influence scores most (for example, ```study_hours_per_day``` usually ranks high). These results demonstrate the model’s reliability.
 - **Prediction Pipeline:** A pipeline script (```predict_pipeline.py``` in src/) applies the same preprocessing to new input data and uses the saved model (from ```artifacts/```) to make predictions. The Flask app calls this pipeline when a user submits data, returning the predicted exam score.
 
+## Screenshots / Visuals (Placeholder)
+#### Exploratory Data Analysis (EDA) Charts:
+![Distribution of Exam Score](images/distribution-of-exam-score.png)
+*Figure: Distribution of Exam Score using Histogram and KDE Plot*
+
+![Distribution of Study Hours](images/distribution-of-study-hours.png)
+*Figure: Distribution of Study Hours using Histogram and KDE Plot*
+
+![Exam Score vs Study Hours](images/exam-score-vs-study-hours.png)
+*Figure: Exam Sxore vs Study Hours Relationship using Line Plot and Scatter Plot*
+
+![Exam Score vs Attendance Percentage](images/exam-score-vs-attendance.png)
+*Figure: Exam Sxore vs Attendance Percentage Relationship using Line Plot and Scatter Plot*
+
+#### Web APP UI
+![Input Form UI](images/form-UI-1.png)
+![Input Form UI](images/form-UI-2.png)
+*Image: Input Form UI of Web Application*
+
+![Predicted Output UI](images/predicted-output.png)
+*Image: Predicted Output Exam Score of given Input Values*
+
+![About Us](images/about-us.png)
+*Image: About Us Section of Author*
+
 ## About the Author
 **Anubhav Yadav** – Graduate Data Science student at SRM Institute of Science and Technology (Delhi NCR). Passionate about applying machine learning to educational data.
 
-- LinkedIn: in/anubhav-yadav-srm
-- Portfolio: anubhavyadavportfolio
-- GitHub: AnubhavYadavBCA25
-- Kaggle: anubhavyadavbca2025
+- LinkedIn: [Anubhav Yadav LinkedIn Profile](https://www.linkedin.com/in/anubhav-yadav-data-science/)
+- Portfolio: [Anubhav Yadav Portfolio](https://sites.google.com/view/anubhavyadavportfolio/)
 
 Feel free to connect or reach out for more projects and collaborations! References: The dataset is synthetic but based on realistic scenarios (see Kaggle descriptions), and similar studies have found a positive link between study time and performance ```pmc.ncbi.nlm.nih.gov```.
 
